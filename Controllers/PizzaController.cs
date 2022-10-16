@@ -103,7 +103,7 @@ namespace la_mia_pizzeria.Controllers
                 return View("Edit", formData);
             }
 
-            Pizza pizzaEdit = context.Pizzas.Where(pizza => pizza.Id == id).Include("Ingredients").FirstOrDefault();
+            Pizza pizzaEdit = context.Pizzas.Where(pizza => pizza.Id == id).Include("Category").Include("Ingredients").FirstOrDefault();
 
             pizzaEdit.Name = formData.Pizza.Name;
             pizzaEdit.Description = formData.Pizza.Description;

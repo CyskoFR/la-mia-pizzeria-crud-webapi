@@ -13,7 +13,7 @@ namespace la_mia_pizzeria_crud_mvc.Controllers.Api
 
         public PizzaController()
         {
-            context = new PizzeriaContext();
+
         }
 
         public IActionResult Get()
